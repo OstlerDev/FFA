@@ -14,7 +14,6 @@ import org.bukkit.GameMode;
 /*     */ import org.bukkit.entity.Player;
 /*     */ import org.bukkit.inventory.Inventory;
 /*     */ import org.bukkit.inventory.ItemStack;
-/*     */ import org.bukkit.plugin.PluginDescriptionFile;
 /*     */ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 /*     */ 
@@ -29,28 +28,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 /*     */ 
 /*     */   public void onDisable()
 /*     */   {
-/*  29 */     PluginDescriptionFile pdfFile = getDescription();
-/*  30 */     this.logger.info(pdfFile.getName() + " Has Been Disabled!");
 /*  31 */     saveConfig();
 /*     */   }
 /*     */ 
 /*     */   public void onEnable()
 /*     */   {
-/*  36 */     PluginDescriptionFile pdfFile = getDescription();
-/*  37 */     this.logger.info(pdfFile.getName() + ", Version " + pdfFile.getVersion() + ", Has Been Enabled!");
 /*  38 */     PluginManager pm = getServer().getPluginManager();
 /*  39 */     pm.registerEvents(new listener(this), this);
 /*  40 */     plugin = this;
-/*     */ 
-/*  42 */     getServer().getScheduler().scheduleAsyncRepeatingTask(this, new Runnable()
-/*     */     {
-/*     */       public void run() {
-/*  45 */         //FFA.plugin.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "#######################################");
-/*  46 */         //FFA.plugin.getServer().broadcastMessage(ChatColor.AQUA + "Dev Preview #2 by OstlerDev");
-/*  47 */         //FFA.plugin.getServer().broadcastMessage(ChatColor.LIGHT_PURPLE + "#######################################");
-/*     */       }
-/*     */     }
-/*     */     , 60L, 1200L);
 /*     */   }
 /*     */ 
 /*     */   public int random(int x, int y) {
