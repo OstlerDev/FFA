@@ -57,6 +57,7 @@ public class FFA extends JavaPlugin
     			    Location l = null;
     			    int i = random(1, 20);
     			    String arenaloc = (String)getConfig().get("FFA.spawn." + i);
+    			    if (getConfig().get("FFA.spawn." + i) == null) return;
     			    String[] arenalocarr = arenaloc.split(",");
     			    if (arenalocarr.length == 3) {
     			      int x = Integer.parseInt(arenalocarr[0]);
