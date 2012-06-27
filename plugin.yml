@@ -1,0 +1,7 @@
+name: FFA
+main: me.OstlerDev.FFA.FFA
+version: 0.2a
+author: OstlerDev
+
+commands:
+  FFA:
