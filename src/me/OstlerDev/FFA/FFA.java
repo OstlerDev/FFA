@@ -52,7 +52,7 @@ public class FFA extends JavaPlugin
  
     		public void run() {
     			plugin.saveItems.put(p, p.getInventory().getContents());
-    			    p.sendMessage(ChatColor.GREEN + "Your inventory has been saved!");
+    			    p.sendMessage(ChatColor.GREEN + "Your inventory has been saved until after the game!");
     			    plugin.wait6.remove(p);
     			    Location l = null;
     			    int i = random(1, 20);
