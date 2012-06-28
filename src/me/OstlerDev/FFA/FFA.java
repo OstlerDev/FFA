@@ -51,7 +51,7 @@ public class FFA extends JavaPlugin
 				{
 					public void run()
 					{
-						plugin.getServer().broadcastMessage("Dev Preview by: OstlerDev");
+						//plugin.getServer().broadcastMessage("Dev Preview by: OstlerDev");
 					}
 				}, 60L, 1200L);
 	}

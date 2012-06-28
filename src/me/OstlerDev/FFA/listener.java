@@ -190,6 +190,9 @@ public class listener implements Listener
 		Player p = event.getPlayer().getPlayer();
 		if (ffa.saveItems.containsKey(p))
 		{
+			Location l = ffa.saveLocation.get(p);
+			p.teleport(l);
+			ffa.saveLocation.remove(p);
 			Entry<Player, ItemStack[]>[] entries = (Entry<Player, ItemStack[]>[]) ffa.saveItems.entrySet().toArray(new Entry[0]);
 			for (int i = 0;i<ffa.saveItems.entrySet().size();i++)
 			{
